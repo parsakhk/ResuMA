@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+
 * {
-  background: #fff;
+  background-image: url('./Assets/Bg.png');
+  background-repeat: repeat-x;
   margin: 0;
   padding: 0;
+  font-family: 'Inter', sans-serif;
+
 }
