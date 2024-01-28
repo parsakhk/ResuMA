@@ -1,9 +1,33 @@
 import React from 'react'
 import styled from 'styled-components'
 
-function Input() {
+const InputGroup = styled.div`
+  position: relative;
+`
+const InputCon = styled.input`
+  padding: 12px 16px;
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid #D5D5D5;
+  font-size: 1em;
+  width: 100%;
+
+`
+const TogglePassIcon = styled.span`
+	z-index: 9999;
+	position: absolute;
+	top: 30%;
+	right: -10px;  cursor: pointer;
+`
+
+function Input(props) {
   return (
-    <div>Input</div>
+    <InputGroup>
+      <InputCon placeholder={props.placeholder} type={props.type}/>
+      <TogglePassIcon>
+        {props.toggleIcon}
+      </TogglePassIcon>
+    </InputGroup>
   )
 }
 

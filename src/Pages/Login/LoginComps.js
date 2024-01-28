@@ -6,7 +6,6 @@ export const RegisterIn = styled.div`
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    padding: 32px;
     border-radius: 16px;
     background: #FFF;
     box-shadow: 0px 12px 20px 0px rgba(93, 93, 93, 0.15);
@@ -20,7 +19,7 @@ export const ContentTop = styled.div`
     gap: 16px;
     background: #FFF;
     margin-bottom: 16px;
-
+    padding-top: 32px;
     * {
         background: #FFF;
     }
@@ -38,6 +37,7 @@ export const ContentDown = styled.div`
     flex-direction: column;
     gap: 32px;
     background: #FAFBFC;
+    padding-bottom: 32px;
 
     * {
         background: #FAFBFC;
@@ -81,8 +81,26 @@ export const StyledButton = styled.button`
     font-weight: 500;
     border-radius: 8px;
     border: 1px solid #2C5D81;
+
+    .icon {
+        background: ${props => props.primary ? "transparent" : "white"};
+    }
 `;
 
-export const StyledField = styled.input`
-    
+export const ErrorPlacer = styled.div`
+    display: flex;
+    width: 151px;
+    height: 28px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+`
+
+export const EndText = styled.p`
+    font-size: 16px;
+`
+export const Link = styled.a`
+    font-style: normal;
+    font-size: 16px;
+    text-decoration: none;
 `
