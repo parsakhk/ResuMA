@@ -56,3 +56,33 @@ export const TopDesc = styled.p`
     font-weight: 400;
     font-size: 16px;
 `
+
+/** LOWER PART COMPONENTS */
+export const Form = styled.form`
+    display: flex;
+    padding: 0px 16px;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 392px;
+`
+export const StyledButton = styled.button`
+    /* Adapt the colors based on primary prop */
+    background: ${props => props.primary ? "#2C5D81" : "white"};
+    color: ${props => props.primary ? "white" : "#2C5D81"};
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    font-size: 1em;
+    padding: 12px 16px;
+    font-weight: 500;
+    border-radius: 8px;
+    border: 1px solid #2C5D81;
+`;
+
+export const StyledField = styled.input`
+    
+`
