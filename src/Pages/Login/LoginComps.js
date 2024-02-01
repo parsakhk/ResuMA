@@ -74,6 +74,7 @@ export const StyledButton = styled.button`
     gap: 8px;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 
     width: 100%;
     font-size: 1em;
