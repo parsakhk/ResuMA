@@ -105,3 +105,22 @@ export const Link = styled.a`
     font-size: 16px;
     text-decoration: none;
 `
+export const InputGroup = styled.div`
+  position: relative;
+  width: 100%;
+`
+export const InputCon = styled.input`
+  padding: 12px 16px;
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid #D5D5D5;
+  font-size: 1em;
+  width: 100%;
+  box-sizing: border-box;
+`
+export const TogglePassIcon = styled.span`
+	z-index: 9999;
+	position: absolute;
+	top: 30%;
+	right: 16px;  cursor: pointer;
+`

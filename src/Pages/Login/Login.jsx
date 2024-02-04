@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { ContentDown, ContentTop, IconImg, RegisterIn, Seperator, TopDesc, TopText, Form, StyledButton, ErrorPlacer, EndText} from './LoginComps'
+import { ContentDown, ContentTop, IconImg, RegisterIn, Seperator, TopDesc, TopText, Form, StyledButton, ErrorPlacer, EndText, InputGroup, TogglePassIcon, InputCon} from './LoginComps'
 import './Login.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import usePasswordToggle from '../../Hooks/usePasswordToggle'
@@ -15,11 +15,13 @@ function Login() {
   const [PasswordInputType, ToggleIcon] = usePasswordToggle()
 
   const history = useNavigate()
+
   const handleSubmit = async(event) => {
     event.preventDefault()
     try {
+      console.log(email,password)
       const response = await axios.post('http://localhost:5000/api/auth/login', { email, password, });
-      
+      console.log(response)
       history("/dashboard")
     } catch (error) {
       console.error(error);
@@ -41,8 +43,15 @@ function Login() {
               <FontAwesomeIcon className='icon' icon={faGoogle} />
               Sign in with google</StyledButton>
             <Seperator/>
-            <Input placeholder="Email" type="text" value={email} onChange={(event) => setEmail(event.target.value)}/>
-            <Input placeholder="Password" type={PasswordInputType} toggleIcon={ToggleIcon} value={password} onChange={(event) => setPassword(event.target.value)}/>
+            <InputGroup>
+              <InputCon placeholder="Email" type="text" onChange={(e) => setEmail(e.target.value)} value={email} />
+            </InputGroup>
+            <InputGroup>
+              <InputCon placeholder="Password" type={PasswordInputType} onChange={(e) => setPassword(e.target.value)} value={password} />
+              <TogglePassIcon>
+                <FontAwesomeIcon icon={ToggleIcon}/>
+              </TogglePassIcon>
+            </InputGroup>
             <StyledButton primary={false} type='submit'>Sign with email</StyledButton>
             <ErrorPlacer/>
           </Form>
