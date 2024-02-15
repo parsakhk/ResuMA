@@ -19,10 +19,8 @@ function Login() {
   const handleSubmit = async(event) => {
     event.preventDefault()
     try {
-      console.log(email,password)
       const response = await axios.post('http://localhost:5000/api/auth/login', { email, password, });
-      console.log(response)
-      history("/dashboard")
+      history("/onboarding")
     } catch (error) {
       console.error(error);
     }
@@ -55,7 +53,7 @@ function Login() {
             <StyledButton primary={false} type='submit'>Sign with email</StyledButton>
             <ErrorPlacer/>
           </Form>
-          <EndText>No account? <Link to="/signup">Sign up now!</Link></EndText>
+          <EndText>No account? <Link to="/home">Sign up now!</Link></EndText>
         </ContentDown>
       </RegisterIn>
     </div>

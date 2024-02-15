@@ -25,7 +25,7 @@ export const ContentTop = styled.div`
     }
 `
 export const Seperator = styled.hr`
-  border-top: 1px solid #bbb;
+  border-top: 1px solid rgba(213, 213, 213, 1);
   border-radius: 5px;
   width: 100%;
 `
