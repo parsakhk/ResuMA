@@ -10,6 +10,9 @@ export const MainContainer = styled.div`
 export const TitleContainer = styled.div`
     width: 100%;
     background: none;
+    display: flex;
+    align-items: start;
+    justify-content: start;
 `
 export const Parts = styled.div`
     box-shadow: 0px 12px 20px 0px rgba(93, 93, 93, 0.15);
@@ -58,3 +61,12 @@ export const StyledButton = styled.button`
         background: ${props => props.primary ? "transparent" : "white"};
     }
 `;
+
+export const EndContainer = styled.div`
+    width: 100%;
+    background: none;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    justify-content: space-between;
+`
